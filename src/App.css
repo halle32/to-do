@@ -1,38 +1,94 @@
-.App {
+.app {
+  max-width: 400px;
+  margin: 50px auto;
+  font-family: sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 7px;
+  border-color: #1973b8;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
+  transition: box-shadow 0.2s ease;
+  border-color: #1973b8;
+}
+
+
+button {
+  padding: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #3982b7;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.addbutton {
+  padding: 8px;
+}
+
+button:hover {
+  background-color: #b3aaaa;
+  transform: scale(1.1);
+}
+
+
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.deletebutton:hover {
+  background-color: #a97676;
+}
+.editbutton:hover {
+  background-color: #409d7e;
+}
+
+.addbutton:hover {
+  background-color: #4888b6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #96c8ec;
+  margin: 10px 0;
+  padding: 5px;
+  display:flex ;
+  flex:auto ;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+li:hover {
+  background-color: #dceffd;
+  transform: translateX(2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+li.done span {
+  text-decoration: line-through;
+  color: #aaa;
 }
